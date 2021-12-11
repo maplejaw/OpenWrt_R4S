@@ -24,6 +24,8 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 				set network.\$1.dns='$main_ip'\\
 " package/base-files/files/bin/config_generate
 
+# 可选项：1，DHCP忽略此接口；2，禁用IPV6。
+
 # =======旁路由设置 END=========
 
 
