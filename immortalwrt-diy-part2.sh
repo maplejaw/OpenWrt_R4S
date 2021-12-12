@@ -32,7 +32,7 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 pushd feeds/luci/applications
 
 rm -rf luci-app-frpc
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-frpc
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-frpc
 
 popd
 # =======替换默认包 END======
