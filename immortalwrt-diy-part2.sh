@@ -28,6 +28,15 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 
 # =======旁路由设置 END=========
 
+# =======替换默认包 START======
+pushd feeds/luci/applications
+
+rm -rf luci-app-frpc
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-frpc
+
+popd
+# =======替换默认包 END======
+
 
 # 修改默认密码
 # sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$EVQNUXgW$MBP1fj3byNZHdT63eYpig\//g' package/emortal/default-settings/files/99-default-settings
