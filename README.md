@@ -12,7 +12,10 @@
 1. 网络->接口->编辑->DHCP服务器->IPv6设置：禁用RA服务、禁用DHCPv6服务、禁用NDP代理。
 2. 网络->接口->编辑->高级设置：取消勾选委托IPv6前缀。
 
-默认插件：可自行修改config插件定制增删
+**默认插件**：可自行修改config插件定制增删
+
 luci-app-frpc
+
 luci-app-openclash
+
 luci-app-passwall
