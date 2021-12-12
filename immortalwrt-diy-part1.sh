@@ -20,4 +20,4 @@
 
 
 # Add Single Package
-git clone https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
+# git clone https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
