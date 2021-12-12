@@ -38,6 +38,6 @@ popd
 # =======替换默认包 END======
 
 
-# 修改默认密码
-# sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$EVQNUXgW$MBP1fj3byNZHdT63eYpig\//g' package/emortal/default-settings/files/99-default-settings
+# 修改默认密码( :0:99999:7::: 后缀不变)
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$NL4C3NBA$zW9T8HR88qfEWdMw7kLQx.:18972/g' package/emortal/default-settings/files/99-default-settings
 
