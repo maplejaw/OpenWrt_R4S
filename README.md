@@ -13,9 +13,10 @@
 2. 网络->接口->编辑->高级设置：取消勾选委托IPv6前缀。
 
 **默认插件**：可自行修改config插件定制增删
+* luci-app-frpc
+* luci-app-openclash
+* luci-app-passwall
 
-luci-app-frpc
-
-luci-app-openclash
-
-luci-app-passwall
+**旁路由使用方法**：
+* 侵入式：旁路由开启DHCP，主路由默认网关和DNS改成旁路由IP。
+* 非侵入式：旁路由关闭DHCP，设备改成静态IP,网关和DNS设置成旁路由IP.
