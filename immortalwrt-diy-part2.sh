@@ -25,6 +25,9 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 " package/base-files/files/bin/config_generate
 
 # 可选项：1，DHCP忽略此接口；2，禁用IPV6。
+#sed -i "/set network.\$1.proto='dhcp'/a\\
+#				set dhcp.\$1.ignore='1'\\
+#" package/base-files/files/bin/config_generate
 
 # =======旁路由设置 END=========
 
@@ -37,7 +40,13 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-frpc
 popd
 # =======替换默认包 END======
 
+pushd package/emortal/default-settings/files
+
+# 修改默认语言为简体中文
+sed -i 's/luci.main.lang=auto/luci.main.lang=zh_cn/g' 99-default-settings
 
 # 修改默认密码( :0:99999:7::: 后缀不变)
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$NL4C3NBA$zW9T8HR88qfEWdMw7kLQx.:18972/g' package/emortal/default-settings/files/99-default-settings
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$NL4C3NBA$zW9T8HR88qfEWdMw7kLQx.:18972/g' 99-default-settings
+
+popd
 
