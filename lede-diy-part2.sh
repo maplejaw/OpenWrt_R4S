@@ -10,9 +10,24 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# =======旁路由设置 START=========
+
+side_ip="192.168.50.2"  #旁路由IP
+main_ip="192.168.50.1"  #主路由IP
+
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.50.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/'$side_ip'/g' package/base-files/files/bin/config_generate
+
+# 修改默认网关和DNS
+sed -i "/set network.\$1.netmask='\$netm'/a\\
+				set network.\$1.gateway='$main_ip'\\
+				set network.\$1.dns='$main_ip'\\
+" package/base-files/files/bin/config_generate
+
+# 可选项：1，DHCP忽略此接口；2，禁用IPV6。
+
+# =======旁路由设置 END=========
 
 # 修改默认密码
-#sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$EVQNUXgW$MBP1fj3byNZHdT63eYpig\//g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$NL4C3NBA$zW9T8HR88qfEWdMw7kLQx.:18972/g' package/lean/default-settings/files/zzz-default-settings
 
