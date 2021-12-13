@@ -32,6 +32,9 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 # =======旁路由设置 END=========
 
 # =======替换默认包 START======
+
+rm -rf feeds/packages/net/frp/files
+
 pushd feeds/luci/applications
 
 rm -rf luci-app-frpc
