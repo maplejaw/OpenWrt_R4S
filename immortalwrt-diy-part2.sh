@@ -33,7 +33,13 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 
 # =======替换默认包 START======
 
-rm -rf feeds/packages/net/frp/files
+pushd feeds/packages
+
+rm -rf net/frp
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/frp  net/frp
+
+popd
+
 
 pushd feeds/luci/applications
 
