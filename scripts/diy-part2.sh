@@ -38,8 +38,6 @@ rm -rf net/frp
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/frp  net/frp
 
 popd
-
-
 pushd feeds/luci/applications
 
 rm -rf luci-app-frpc
