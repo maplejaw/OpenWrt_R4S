@@ -60,7 +60,7 @@ popd
 pushd feeds/luci/themes
 
 # 内置argon壁纸
-cp $GITHUB_WORKSPACE/data/images/* luci-theme-argon/htdocs/luci-static/argon/background
+cp $GITHUB_WORKSPACE/data/wallpaper/* luci-theme-argon/htdocs/luci-static/argon/background
 
 popd
 # =======自定义主题 END=======
