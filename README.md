@@ -1,9 +1,9 @@
 ## 在线编译旁路由版！！！
 >编译教程参考：https://github.com/P3TERX/Actions-OpenWrt
 
-本固件基于immortalwrt-21.02和Lede编译，**仅自用！！！**
+本固件基于immortalwrt-21.02编译，**仅自用！！！**
 
-如有想借鉴编译的，请fork后自定义diy-part2.sh中的side_ip和main_ip，并且注释掉修改密码的那行。默认开启IPV6和DHCP，如果旁路由不需要的话，可登录后台手动关闭！
+如有想借鉴编译的，请fork后自定义scripts/diy-part2.sh中的side_ip和main_ip，并且注释掉修改密码的那行。默认开启IPV6和DHCP，如果旁路由不需要的话，可登录后台手动关闭！
 
 **关闭DHCP**：
 1. 网络->接口->编辑->DHCP服务器->常规设置：勾选忽略此接口。

@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: immortalwrt-diy-part1.sh
+# File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
@@ -19,5 +19,3 @@
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
 
-# Add Single Package
-# git clone https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
