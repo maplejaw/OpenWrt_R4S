@@ -80,5 +80,5 @@ popd
 # 移除固件内置插件
 #sed -i 's/luci-app-ddns//g;s/luci-app-upnp//g;s/luci-app-adbyby-plus//g;s/luci-app-vsftpd//g;s/luci-app-ssr-plus//g;s/luci-app-unblockmusic//g;s/luci-app-vlmcsd//g;s/luci-app-wol//g;s/luci-app-nlbwmon//g;s/luci-app-accesscontrol//g' include/target.mk
 
-# 修改默认shell为zsh
+# 修改默认shell为zsh,需配置 CONFIG_PACKAGE_zsh=y ,否则请注释掉这行
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
