@@ -35,7 +35,7 @@ sed -i "/set network.\$1.netmask='\$netm'/a\\
 pushd feeds/packages
 
 rm -rf net/frp
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/frp  net/frp
+svn co https://github.com/coolsnowwolf/packages/trunk/net/frp  net/frp
 
 popd
 pushd feeds/luci/applications
