@@ -60,13 +60,17 @@ Target Profile (FriendlyARM NanoPi R4S)  --->
 (64) Kernel partition size (in MB) (NEW)
 (1024) Root filesystem partition size (in MB) (NEW)
 
-# 勾选主题
-LuCI ---> Themes ---> luci-theme-argon
-
 # 勾选zsh
 Utilities --> Shells --> zsh
 
 # 勾选ipv6
 Extra packages ---> ipv6helper
 
+# 勾选主题
+LuCI ---> Themes ---> luci-theme-argon
+
 # 勾选luci插件
+LuCI ---> Applications ---> luci-app-argon-config
+LuCI ---> Applications ---> luci-app-frpc
+LuCI ---> Applications ---> luci-app-passwall
+LuCI ---> Applications ---> luci-app-openclash
